@@ -1,5 +1,6 @@
 <?php
-class Soporte {
+require_once "Resumbible.php";
+abstract class Soporte implements Resumbible {
     public string $titulo;
     private int $numero;
     protected float $precio;
@@ -11,24 +12,20 @@ class Soporte {
         $this->precio = $precio;
     }
 
-    // Método para obtener el precio sin IVA
     public function getPrecio(): float {
         if ($this->precio < 0) {
             throw new InvalidArgumentException("El precio no puede ser negativo.");
         }
         return $this->precio;}
 
-    // Método para obtener el precio con IVA
     public function getPrecioConIva(): float {
         return $this->precio * (1 + self::$IVA);
     }
 
-    // Método para obtener el número
     public function getNumero(): int {
         return $this->numero;
     }
 
-    // Método para mostrar un resumen del soporte
     public function muestraResumen(): void {
         echo "Título: {$this->titulo}\n";
         echo "Número: {$this->numero}\n";
