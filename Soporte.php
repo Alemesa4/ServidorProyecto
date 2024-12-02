@@ -1,6 +1,6 @@
 <?php
-require_once "Resumbible.php";
-abstract class Soporte implements Resumbible {
+require_once "Resumible.php";
+class Soporte implements Resumible {
     public string $titulo;
     private int $numero;
     protected float $precio;
@@ -9,8 +9,9 @@ abstract class Soporte implements Resumbible {
     public function __construct(string $titulo, int $numero, float $precio) {
         $this->titulo = $titulo;
         $this->numero = $numero;
-        $this->precio = $precio;
+        $this->precio = $precio; 
     }
+    
 
     public function getPrecio(): float {
         if ($this->precio < 0) {

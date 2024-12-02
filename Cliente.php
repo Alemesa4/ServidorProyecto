@@ -66,7 +66,7 @@ class Cliente {
         return false;
     }
 
-    public function listarAlquileres() {
+    public function listaAlquileres() {
         echo "Alquileres actuales (". count($this->soportesAlquilados) . "):\n";
         foreach ($this->soportesAlquilados as $soporte) {
             $soporte->muestraResumen(); 

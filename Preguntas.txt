@@ -1,4 +1,4 @@
 9.
-Al hacer Soporte abstracta, forzamos a que siempre se use a través de sus clases derivadas, asegurando que se sigan las reglas de diseño.
+No deja de funcionar el codigo, ocurre una doble aparición ya que al hacer Soporte abstracta forzamos a que siempre se use a través de sus clases derivadas, asegurando que se sigan las reglas de diseño.
 10.
 No. Si la clase base es decir soporte ya tiene implementado el método de la interfaz, los hijos no necesitan hacerlo de nuevo
